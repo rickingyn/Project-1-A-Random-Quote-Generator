@@ -11,7 +11,7 @@ const quotes = [
   {
     quote: 'I came in with near zero programming knowledge and halfway in, I’m quite confident of what I can achieve',
     source: 'Kelechi I.',
-    citation: 'Lifelong Learner, Intro to Programming Student, Udacity'
+    citation: 'Lifelong Learner, Intro to Programming Student, Udacity',
   },
   {
     quote: 'Any fool can write code that a computer can understand. Good programmers write code that humans can understand.',
@@ -72,6 +72,24 @@ function printQuote() {
   // access element with 'quote-box' Id and change html to generated string
   return document.getElementById('quote-box').innerHTML = messageDisplayed;
 }
+
+// function to create random
+function getRandomColor() {
+  // create random number between 0-255 for RGB colors
+  const r = Math.floor(Math.random() * 256);
+  const b = Math.floor(Math.random() * 256);
+  const g = Math.floor(Math.random() * 256);
+
+  // concatenate random RGB colors generated into string with template literal
+  const randomColor = `rgb(${r}, ${g}, ${b})`;
+
+  // access the body element's background and change to the random RGB color created
+  document.body.style.backgroundColor = randomColor;
+  // access the button and change the background color to the random RGB color created
+  document.getElementById('loadQuote').style.backgroundColor = randomColor;
+}
+
+getRandomColor();
 
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
 
