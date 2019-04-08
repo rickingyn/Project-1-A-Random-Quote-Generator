@@ -46,9 +46,6 @@ function getRandomQuote(quotes) {
   return quotes[randomNum];
 }
 
-console.log(getRandomQuote(quotes));
-
-
 function printQuote() {
   // create variable to call the getRandomQuote function
   const randomQuote = getRandomQuote(quotes);
@@ -96,6 +93,9 @@ function getRandomColor() {
 function getRandomNumber(max) {
   return Math.floor(Math.random() * max );
 }
+
+// call setInterval method to call printQuote function every 20 seconds
+setInterval(printQuote, 20000);
 
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
 
