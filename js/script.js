@@ -37,7 +37,10 @@ console.log(quotes);
 
 function getRandomQuote(quotes) {
   // create variable to store random number between 0-4
-  const randomNum = Math.floor(Math.random() * quotes.length);
+  const randomNum = getRandomNumber(quotes.length);
+
+  // call getRandomColor function
+  getRandomColor();
 
   // return a quote object at a random index number generated
   return quotes[randomNum];
@@ -76,9 +79,9 @@ function printQuote() {
 // function to create random
 function getRandomColor() {
   // create random number between 0-255 for RGB colors
-  const r = Math.floor(Math.random() * 256);
-  const b = Math.floor(Math.random() * 256);
-  const g = Math.floor(Math.random() * 256);
+  const r = getRandomNumber(256);
+  const b = getRandomNumber(256);
+  const g = getRandomNumber(256);
 
   // concatenate random RGB colors generated into string with template literal
   const randomColor = `rgb(${r}, ${g}, ${b})`;
@@ -89,7 +92,10 @@ function getRandomColor() {
   document.getElementById('loadQuote').style.backgroundColor = randomColor;
 }
 
-getRandomColor();
+// create random number function to use in getRandomColor and getRandomQuote function
+function getRandomNumber(max) {
+  return Math.floor(Math.random() * max );
+}
 
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
 
