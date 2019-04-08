@@ -6,16 +6,34 @@ project 1 - A Random Quote Generator
 // Study guide for this project - https://drive.google.com/file/d/1s5grutGuQFwJcQP8bFwEI69Q8FCkGdDk/view?usp=sharing
 
 
-/*** 
-  Create the array of quote objects and name it `quotes`.
-  Add at least five quote objects to the `quotes` array.
-  Give each quote object a `quote` and `source` property.
-  Add the `citation` property to at least one object in the array.
-  Add the `year` property to at least one object in the array.
-  Use console.log() to log your array of quotes to the console.
-***/
+// add quotes array; contains objects with 'quotes' property, 'source' property, 'citation' property and 'year' property
+var quotes = [
+  {
+    quote: 'I came in with near zero programming knowledge and halfway in, I’m quite confident of what I can achieve',
+    source: 'Kelechi I.',
+    citation: 'Lifelong Learner, Intro to Programming Student, Udacity'
+  },
+  {
+    quote: 'Any fool can write code that a computer can understand. Good programmers write code that humans can understand.',
+    source: 'Martin Fowler',
+  },
+  {
+    quote: 'One of the best programming skills you can have is knowing when to walk away for awhile.',
+    source: 'Oscar Godson',
+    year: 2017
+  },
+  {
+    quote: 'I love to smile, even through pain.',
+    source: 'Victoria Arlen'
+  },
+  {
+    quote: 'Don\'t cry because it\'s over, smile because it happened.',
+    source: 'Dr. Seuss'
+  },
+];
 
-
+// log quotes array to console
+console.log(quotes);
 
 
 /***
@@ -23,8 +41,9 @@ project 1 - A Random Quote Generator
    - Create a variable to store a random number 
    - Cse the random number to `return` a random quote object from the `quotes` array.
 ***/
+function getRandomQuote() {
 
-
+}
 
 
 /***
@@ -39,7 +58,9 @@ project 1 - A Random Quote Generator
    - Don't forget to close that final `p` tag.
    - Set the `innerHTML` of the `quote-box` div to the HTML string. 
 ***/
+function printQuote() {
 
+}
 
 
 
