@@ -41,10 +41,13 @@ console.log(quotes);
    - Create a variable to store a random number 
    - Cse the random number to `return` a random quote object from the `quotes` array.
 ***/
-function getRandomQuote() {
+function getRandomQuote(quotes) {
+  // create variable to store random number between 0-4
+  var randomNum = Math.floor(Math.random() * quotes.length);
 
+  // return a quote object at a random index number generated
+  return quotes[randomNum];
 }
-
 
 /***
   Create the `printQuote` function to: 
